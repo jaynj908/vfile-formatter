@@ -43,7 +43,7 @@ def workPath():
     os.chdir(r'{}'.format(pattern))
 
 #Create a list of words and characters to be removed while parsing
-omitWordList = ['English','Dubbed','Watch','cartoons','online','anime','dub','anime',',','Online','-','  ','–']
+omitWordList = ['English','Dubbed','Watch','cartoons','online','anime','dub','anime',',','Online','-','  ','–','onlin','onli','Wat','Wa','[320x180]']
 
 workPath()
 
