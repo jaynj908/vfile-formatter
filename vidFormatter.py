@@ -42,10 +42,8 @@ def workPath():
     pattern = input('==>Enter Folder: ')
     os.chdir(r'{}'.format(pattern))
 
-#Change to cwd to the file we need to edit
-
 #Create a list of words and characters to be removed while parsing
-omitWordList = ['English','Dubbed','Watch','cartoons','online','anime','dub','anime',',','Online','-','  ','–', ' ']
+omitWordList = ['English','Dubbed','Watch','cartoons','online','anime','dub','anime',',','Online','-','  ','–']
 
 workPath()
 
