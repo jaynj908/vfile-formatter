@@ -1,7 +1,7 @@
 import os
 
 # Set the folder to be formatted
-os.chdir(r'E:\SHOWS\LOVE CHUNIBYO')
+os.chdir(r'')  # This will be an input string of the folder path
 
 # List of strings to be removed from each filename
 omit = ['English', 'Dubbed',  'Watch', 'cartoons', 'online',
