@@ -2,7 +2,7 @@ import re
 import os
 import sys
 
-os.chdir('')
+os.chdir(r'/run/user/1000/gvfs/sftp:host=jayz%5C032storage.local/mnt/JayzNstorage/Storage/SHOWS/ANIME/Blood Lad')
 
 count = 0
 formatCount = 0
@@ -13,6 +13,10 @@ for f in os.listdir():
         r'^(?P<show>...+)\s(?P<type>OVA|Episode)\s(?P<epNum>\s|\d*)')
 
     title = title.replace('Watch', '')
+    title = title.replace('cartoons online,', '')
+    title = title.replace('anime online,', '')
+    title = title.replace('English dub anime', '')
+
     count = count + 1
     for line in title.splitlines():
         line = line.strip()
@@ -25,8 +29,12 @@ for f in os.listdir():
             epNum = m.groupdict()['epNum']
             epNum = epNum.strip().zfill(2)
             ext = ext.strip()
-            newName = f'{show} {type} {epNum}{ext}'
+            if epNum == "00":
+                newName = f'{show} {type}{ext}'
+            else:
+                newName = f'{show} {type} {epNum}{ext}'
             formatCount = formatCount + 1
             print(newName)
+            # print(title)
 print(f'File Count = {count}')
 print(f'Formatted Count = {formatCount}')
