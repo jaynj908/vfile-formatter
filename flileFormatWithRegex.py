@@ -2,7 +2,7 @@ import re
 import os
 import sys
 
-os.chdir(r'/run/user/1000/gvfs/sftp:host=jayz%5C032storage.local/mnt/JayzNstorage/Storage/SHOWS/ANIME/BUNGO STRAY/Season 3')
+os.chdir(r'')
 
 count = 0
 formatCount = 0
