@@ -2,7 +2,8 @@ import os
 
 os.chdir(r'')
 
-omit = ['Watch', 'cartoons', 'online', 'English', 'Dubbed','anime','dub',',']
+omit = ['Watch', 'cartoons', 'online', 'English', 'Dubbed','anime','dub',','] #List may need to be modified. Links are often in pieces.
+
 for f in os.listdir():
     fname, ext = os.path.splitext(f)
     ext = ext.strip()
@@ -19,6 +20,7 @@ for f in os.listdir():
     else:
         fname = fname.strip()
         newName = f'{fname}{ext}'
+        
     print(newName)
     # !!!Do not execute the next line til sure formatting is good!!!    
-    # os.rename(f, newName) 
+    # os.rename(f, newname)
