@@ -39,8 +39,6 @@ for f in os.listdir():
             # Remove Ova = 00
             if epNum == "00":
                 newName = f'{show} {type}{ext}'
-
-                newName = f'{show}{ext}'
             else:
                 newName = f'{show} {type} {epNum}{ext}'
 
